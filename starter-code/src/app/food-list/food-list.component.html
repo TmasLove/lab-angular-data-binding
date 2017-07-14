@@ -1,3 +1,21 @@
-<p>
-  food-list works!
-</p>
+<section>
+  <h2> IronNutrition </h2>
+</section>
+
+
+<input placeholder="kgb" [(ngModel)]="search">
+
+
+
+
+
+
+
+<ul>
+  <li *ngFor="let oneFood of cows | foodSearch: search">
+    <p><b> {{oneFood.name}}</b> </p>
+    <p> Calories: {{oneFood.calories}} </p>
+    <img src="{{oneFood.image}}">
+    <p> Quantity: {{oneFood.quantity}} </p>
+  </li>
+</ul>
